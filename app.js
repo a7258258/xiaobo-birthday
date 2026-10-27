@@ -2,24 +2,18 @@ const cards = [
   {
     id: "denia",
     theme: "theme-denia",
-    from: "鳴潮 · 熱熔共鳴者",
-    name: "達妮婭",
     quote: "噓……小波的生日，先別聲張。泡影我替你撐著，今天就好好被溫柔包圍吧。",
     photo: "達妮婭.jpg",
   },
   {
     id: "si",
     theme: "theme-si",
-    from: "終末地 · 巨獸代理人",
-    name: "祀",
     quote: "哼，生日才想起來找我？行吧——墨意給你畫一場好天氣，記得之後來緣緣莊清帳。",
     photo: "祀.jpg",
   },
   {
     id: "typh",
     theme: "theme-typh",
-    from: "終末地 · 荒野獵手",
-    name: "提弗洛斯",
     quote: "好故事和好獵手一樣，先瞄準的都是心臟。這支箭，獻給小波的今天。",
     photo: "提弗洛斯.webp",
   },
@@ -36,8 +30,6 @@ const cardEl = document.getElementById("card");
 const cardInner = document.getElementById("cardInner");
 const cardFront = document.getElementById("cardFront");
 const portrait = document.getElementById("portrait");
-const cardFrom = document.getElementById("cardFrom");
-const cardName = document.getElementById("cardName");
 const cardQuote = document.getElementById("cardQuote");
 const progressText = document.getElementById("progressText");
 const burst = document.getElementById("burst");
@@ -61,14 +53,12 @@ function showPhoto(data) {
   const img = document.createElement("img");
   img.className = "portrait-photo";
   img.src = data.photo;
-  img.alt = data.name;
+  img.alt = "";
   portrait.appendChild(img);
 }
 
 function loadCard(data) {
   cardFront.className = `card-face front ${data.theme}`;
-  cardFrom.textContent = data.from;
-  cardName.textContent = data.name;
   cardQuote.textContent = data.quote;
   showPhoto(data);
 }
