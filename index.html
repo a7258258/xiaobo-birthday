@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#12081f" />
+  <title>小波的生日限定 · 共鳴協議</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="stars" aria-hidden="true"></div>
+  </div>
+
+  <main class="phone">
+    <!-- 封面 -->
+    <section class="screen active" id="cover">
+      <p class="eyebrow">生日限定協議 · 僅此一夜</p>
+      <h1>給小波的<br />共鳴召喚</h1>
+      <p class="lead">
+        瑝瓏的熱熔泡影、塔衛二的墨意與獵矢，
+        今晚都會為你停一下。
+      </p>
+      <button class="btn primary" id="startBtn" type="button">啟動卡池</button>
+    </section>
+
+    <!-- 抽卡台 -->
+    <section class="screen" id="summon">
+      <header class="topbar">
+        <p class="eyebrow">小波專屬卡池</p>
+        <p class="progress" id="progressText">0 / 3</p>
+      </header>
+
+      <div class="stage">
+        <div class="burst" id="burst" aria-hidden="true"></div>
+        <article class="card" id="card">
+          <div class="card-inner" id="cardInner">
+            <div class="card-face back">
+              <div class="seal">SSR</div>
+              <p>生日限定</p>
+              <div class="rune">✦</div>
+            </div>
+            <div class="card-face front" id="cardFront">
+              <div class="badge" id="cardBadge">SSR</div>
+              <div class="portrait" id="portrait"></div>
+              <div class="meta">
+                <p class="from" id="cardFrom"></p>
+                <h3 id="cardName"></h3>
+                <p class="quote" id="cardQuote"></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="drawBtn" type="button">開始抽卡</button>
+        <button class="btn ghost hidden" id="nextBtn" type="button">收下祝福，繼續</button>
+      </div>
+    </section>
+
+    <!-- 結局 -->
+    <section class="screen" id="finale">
+      <p class="eyebrow">協議完成</p>
+      <h2>三張卡都到齊了</h2>
+      <p class="lead finale-copy">
+        達妮婭把泡影留給你、祀把墨意寫進你的日子、
+        提弗洛斯把故事射進心口——
+        而最後一句，是只屬於小波的。
+      </p>
+      <div class="finale-card">
+        <p class="tiny">來自你的人</p>
+        <p class="big">
+          <span>小波生日快樂</span>
+          <span>我們天天都要快樂</span>
+          <span>好耶！</span>
+        </p>
+      </div>
+      <button class="btn primary" id="replayBtn" type="button">再看一次</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
